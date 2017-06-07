@@ -1,15 +1,14 @@
 {
   "name": "toggl-yesterday",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Simple script to fetch a report of what I did yesterday to post in Slackbot for our daily standup report",
-  "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "go": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "go": "node index.js"
   },
   "bin": {
-    "tyesterday": "yarnpkg run go"
+    "toggl-yesterday": "./index.js",
+    "tyesterday": "./index.js"
   },
   "repository": {
     "type": "git",
