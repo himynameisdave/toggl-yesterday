@@ -1,0 +1,25 @@
+{
+  "name": "toggl-yesterday",
+  "version": "1.0.0",
+  "description": "Simple script to fetch a report of what I did yesterday to post in Slackbot for our daily standup report",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himynameisdave/toggl-yesterday.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himynameisdave/toggl-yesterday/issues"
+  },
+  "homepage": "https://github.com/himynameisdave/toggl-yesterday#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "moment": "^2.18.1",
+    "toggl-api": "^1.0.1"
+  }
+}
