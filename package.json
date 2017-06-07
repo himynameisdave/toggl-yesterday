@@ -4,15 +4,21 @@
   "description": "Simple script to fetch a report of what I did yesterday to post in Slackbot for our daily standup report",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "go": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "tyesterday": "yarnpkg run go"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/himynameisdave/toggl-yesterday.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "preferGlobal": true,
+  "keywords": ["toggle", "toggle-api", "experiement", "scripts", "workflow", "slack"],
+  "author": "himynameisdave <d@velunny.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/himynameisdave/toggl-yesterday/issues"
   },
