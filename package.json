@@ -1,6 +1,6 @@
 {
   "name": "toggl-yesterday",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Simple script to fetch a report of what I did yesterday to post in Slackbot for our daily standup report",
   "scripts": {
     "start": "node index.js",
@@ -8,7 +8,8 @@
   },
   "bin": {
     "toggl-yesterday": "./index.js",
-    "tyesterday": "./index.js"
+    "tyesterday": "./index.js",
+    "standup": "./index.js"
   },
   "repository": {
     "type": "git",
