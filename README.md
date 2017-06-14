@@ -17,13 +17,21 @@ Then `yarn install` and you should be good to go. Run `node index.js` (or `yarnp
 The result is something that looks like this:
 
 ```
-👷 #6441 - fix a template builder related sentry issue
-👷 #6369 - fix edit mode in timeline stuff
-👷 #6202 - perf gainz in the survey builder
-🕵 #6442 - include circle statuses in production-details
-👨‍👩‍👧‍👦 Project Meetings
+   C O P I E D    T O    T H E    C L I P B O A R D:
 
-👌 👌 👌 COPIED TO THE CLIPBOARD WITH GREEEEAT SUCCESS! 👌 👌 👌
+   =====>   👷 Building out that sweet new feature #4433
+   =====>   👷 Resolving some CR feedback (#1234)
+   =====>   👨‍👩‍👧‍👦 Feedback project meeting
+   =====>   🍔 Lunch and learned
+
+   ___T_
+  | o o |
+  |__-__|   Stop SLACKing off, human!
+  /| []|\
+()/|___|\()
+   |_|_|
+   /_|_\
+
 ```
 
 And it will actually copy that to your clipboard. Pretty handy.

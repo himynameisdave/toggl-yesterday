@@ -30,7 +30,7 @@ const main = () => {
         )
         .then(entries => {
             const slackText = entries.reduce(reduceToPostableString(PROJECTS_SLACK_EMOJI, ''), '')
-            const consoleText = entries.reduce(reduceToPostableString(PROJECTS_EMOJI, '  =>  '), '')
+            const consoleText = entries.reduce(reduceToPostableString(PROJECTS_EMOJI, '   =====>   '), '')
             clipboard.copy(slackText, successBanner(consoleText));
         })
         .catch(err => {
