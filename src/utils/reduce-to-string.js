@@ -1,7 +1,7 @@
 
 
-const reduceToStr = emojiMap => (acc, entry) => {
-    acc += `${emojiMap[entry.pid]} ${entry.description}\n`;
+const reduceToStr = (emojiMap, padding = '') => (acc, entry) => {
+    acc += `${padding}${emojiMap[entry.pid]} ${entry.description}\n`;
     return acc;
 };
 

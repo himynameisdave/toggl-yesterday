@@ -11,15 +11,15 @@ const main = () => {
     const PROJECTS_SLACK_EMOJI = getProjectsEmoji('slackEmoji');
     const PROJECTS_EMOJI = getProjectsEmoji('emoji');
     //  External Deps
-    const clearConsole = require('clear');
     const clipboard = require('copy-paste');
     //  Utils/helpers
+    const dedupeDescriptions = require('./utils/dedupe.js')('description');
     const fetchToggl = require('./utils/fetch-toggl.js');
     const getDates = require('./utils/get-dates.js');
-    const whitelistedProjectsOnly = require('./utils/whitelist-only.js')(PROJECTS_WHITELIST, 'pid');
-    const dedupeDescriptions = require('./utils/dedupe.js')('description');
-    const sortByProjectOrder = require('./utils/sort-by.js')(PROJECTS_WHITELIST, 'pid');
     const reduceToPostableString = require('./utils/reduce-to-string.js');
+    const sortByProjectOrder = require('./utils/sort-by.js')(PROJECTS_WHITELIST, 'pid');
+    const successBanner = require('./utils/success-banner.js');
+    const whitelistedProjectsOnly = require('./utils/whitelist-only.js')(PROJECTS_WHITELIST, 'pid');
 
     //  Run our fetch
     fetchToggl(getDates())
@@ -29,12 +29,9 @@ const main = () => {
             .sort(sortByProjectOrder)
         )
         .then(entries => {
-            const slackText = entries.reduce(reduceToPostableString(PROJECTS_SLACK_EMOJI), '')
-            const consoleText = entries.reduce(reduceToPostableString(PROJECTS_EMOJI), '')
-            clipboard.copy(slackText, () => {
-                clearConsole();
-                console.log(`\n\n${consoleText}\n👌 👌 👌 COPIED TO THE CLIPBOARD WITH GREEEEAT SUCCESS! 👌 👌 👌\n`);
-            });
+            const slackText = entries.reduce(reduceToPostableString(PROJECTS_SLACK_EMOJI, ''), '')
+            const consoleText = entries.reduce(reduceToPostableString(PROJECTS_EMOJI, '  =>  '), '')
+            clipboard.copy(slackText, successBanner(consoleText));
         })
         .catch(err => {
             console.error(err);
