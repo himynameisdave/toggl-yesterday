@@ -1,6 +1,7 @@
 
 //  Hardcoded projects for now...
 const PROJECTS = [
+    //  BUILDING SHIT
     {
         id: 30002732,
         slackEmoji: ':construction_worker:',
@@ -23,6 +24,12 @@ const PROJECTS = [
         id: 43940771,
         slackEmoji: ':man-woman-girl-boy:',
         emoji: '👨‍👩‍👧‍👦',
+    },
+    //  LUNCHING AND LEARNING:
+    {
+        id: 46278295,
+        slackEmoji: ':burrito:',
+        emoji: '🍔',
     }
 ]
 
