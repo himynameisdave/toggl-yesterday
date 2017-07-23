@@ -3,11 +3,8 @@
   "version": "0.3.0",
   "description": "Simple script to fetch a report of what I did yesterday to post in Slackbot for our daily standup report",
   "scripts": {
-    "start": "node index.js yesterday",
-    "go": "node index.js yesterday",
-    "yesterday": "node index.js yesterday",
-    "weekly": "node index.js weekly",
-    "weekly-report": "node index.js weekly"
+    "yesterday": "babel-node --presets es2015,stage-2 index.js yesterday",
+    "weekly": "babel-node --presets es2015,stage-2 index.js weekly"
   },
   "bin": {
     "toggl-yesterday": "./index.js",
@@ -18,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/himynameisdave/toggl-yesterday.git"
   },
-  "preferGlobal": true,
+  "preferGlobal": false,
   "keywords": [
     "toggle",
     "toggle-api",
@@ -41,6 +38,9 @@
     "toggl-api": "^1.0.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-import": "^2.7.0",
