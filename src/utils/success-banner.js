@@ -17,7 +17,7 @@ const robot = `
 const successBanner = consoleText => () => {
     clearConsole();
     console.log(
-        `${BANNER}\n\n${consoleText}${robot}\n`,
+        `${BANNER}\n\n${consoleText}${robot}\n`
     );
 };
 

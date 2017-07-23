@@ -26,7 +26,7 @@ const main = () => {
         .then(entries => entries
             .filter(whitelistedProjectsOnly)
             .reduce(dedupeDescriptions, [])
-            .sort(sortByProjectOrder),
+            .sort(sortByProjectOrder)
         )
         .then(entries => {
             const slackText = entries.reduce(reduceToPostableString(PROJECTS_SLACK_EMOJI, ``), ``);

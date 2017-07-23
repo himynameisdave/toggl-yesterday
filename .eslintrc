@@ -5,9 +5,15 @@
   },
   "rules": {
       "arrow-parens": 0,
+      "comma-dangle": ["error", {
+          "functions": "never",
+          "objects": "always"
+      }],
       "indent": ["error", 4],
       "quotes": ["error", "backtick"],
+      "max-len": 0,
       "no-console": 0,
+      "no-confusing-arrow": 0,
       "import/newline-after-import": 0
   }
 }
