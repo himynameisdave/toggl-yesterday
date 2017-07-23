@@ -1,4 +1,4 @@
-const TogglClient = require('toggl-api');
+const TogglClient = require(`toggl-api`);
 const Toggl = new TogglClient({ apiToken: process.env.API_TOKEN });
 
 

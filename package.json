@@ -1,10 +1,13 @@
 {
   "name": "toggl-yesterday",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Simple script to fetch a report of what I did yesterday to post in Slackbot for our daily standup report",
   "scripts": {
-    "start": "node index.js",
-    "go": "node index.js"
+    "start": "node index.js yesterday",
+    "go": "node index.js yesterday",
+    "yesterday": "node index.js yesterday",
+    "weekly": "node index.js weekly",
+    "weekly-report": "node index.js weekly"
   },
   "bin": {
     "toggl-yesterday": "./index.js",
@@ -36,5 +39,12 @@
     "dotenv": "^4.0.0",
     "moment": "^2.18.1",
     "toggl-api": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
   }
 }

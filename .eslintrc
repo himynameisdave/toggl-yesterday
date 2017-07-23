@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb",
+  "env": {
+      "node": true
+  },
+  "rules": {
+      "arrow-parens": 0,
+      "indent": ["error", 4],
+      "quotes": ["error", "backtick"],
+      "no-console": 0,
+      "import/newline-after-import": 0
+  }
+}

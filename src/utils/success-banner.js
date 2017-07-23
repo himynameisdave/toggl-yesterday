@@ -1,5 +1,5 @@
-const clearConsole = require('clear');
-const complimentThePettyHuman = require('./compliment-the-petty-human.js')
+const clearConsole = require(`clear`);
+const complimentThePettyHuman = require(`./compliment-the-petty-human.js`);
 
 const BANNER = `
    C O P I E D    T O    T H E    C L I P B O A R D:`;
@@ -17,7 +17,7 @@ const robot = `
 const successBanner = consoleText => () => {
     clearConsole();
     console.log(
-        `${BANNER}\n\n${consoleText}${robot}\n`
+        `${BANNER}\n\n${consoleText}${robot}\n`,
     );
 };
 
