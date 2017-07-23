@@ -1,5 +1,7 @@
+//  External Dep
+import clipboard from 'copy-paste';
 //  Hardcoded for now....
-const PROJECTS = require(`./constants/projects.js`);
+import PROJECTS from './constants/projects.js';
 const getProjectsEmoji = type => PROJECTS.reduce((acc, project) => {
     acc[project.id] = project[type];
     return acc;
@@ -8,19 +10,19 @@ const getProjectsEmoji = type => PROJECTS.reduce((acc, project) => {
 const PROJECTS_WHITELIST = PROJECTS.map(project => project.id);
 const PROJECTS_SLACK_EMOJI = getProjectsEmoji(`slackEmoji`);
 const PROJECTS_EMOJI = getProjectsEmoji(`emoji`);
-//  External Dep
-const clipboard = require(`copy-paste`);
+
 //  Utils/helpers
+import fetchToggl from './utils/fetch-toggl.js';
+import getLastDay from './utils/get-last-day.js';
+import reduceToPostableString from './utils/reduce-to-postable-string.js';
+import successBanner from './utils/success-banner.js';
 const dedupeDescriptions = require(`./utils/dedupe.js`)(`description`);
-const fetchToggl = require(`./utils/fetch-toggl.js`);
-const getLastDay = require(`./utils/get-last-day.js`);
-const reduceToPostableString = require(`./utils/reduce-to-string.js`);
 const sortByProjectOrder = require(`./utils/sort-by.js`)(PROJECTS_WHITELIST, `pid`);
-const successBanner = require(`./utils/success-banner.js`);
 const whitelistedProjectsOnly = require(`./utils/whitelist-only.js`)(PROJECTS_WHITELIST, `pid`);
 
+
 //  Main script
-const main = () => {
+const yesterday = () => {
     //  Run our fetch
     fetchToggl(getLastDay())
         .then(entries => entries
@@ -39,4 +41,4 @@ const main = () => {
         });
 };
 
-module.exports = main;
+export default yesterday;

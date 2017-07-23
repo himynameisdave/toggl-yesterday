@@ -1,4 +1,4 @@
-const TogglClient = require(`toggl-api`);
+import TogglClient from 'toggl-api';
 const Toggl = new TogglClient({ apiToken: process.env.API_TOKEN });
 
 
@@ -10,4 +10,4 @@ const fetchToggl = ({ START_DATE, END_DATE }) => new Promise((res, rej) => {
 });
 
 
-module.exports = fetchToggl;
+export default fetchToggl;

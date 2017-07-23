@@ -24,4 +24,4 @@ const COMPLIMENTS = [
 const complimentThePettyHuman = () => COMPLIMENTS[Math.floor(Math.random() * COMPLIMENTS.length)];
 
 
-module.exports = complimentThePettyHuman;
+export default complimentThePettyHuman;

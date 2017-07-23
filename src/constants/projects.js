@@ -42,7 +42,7 @@ const PROJECTS = [
         project: `INTERVIEWS`,
         slackEmoji: `:speaking_head_in_silhouette:`,
         emoji: `🗣️`,
-    }
+    },
 ];
 
-module.exports = PROJECTS;
+export default PROJECTS;
