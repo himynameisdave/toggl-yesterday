@@ -5,4 +5,4 @@ const dedupe = (uniqueKey) => (acc, entry) => {
 };
 
 
-module.exports = dedupe;
+export default dedupe;

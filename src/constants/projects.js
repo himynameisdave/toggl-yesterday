@@ -4,33 +4,45 @@ const PROJECTS = [
     //  BUILDING SHIT
     {
         id: 30002732,
-        slackEmoji: ':construction_worker:',
-        emoji: '👷',
+        project: `BUILDING`,
+        slackEmoji: `:construction_worker:`,
+        emoji: `👷`,
     },
     //  ADDRESSING CR FEEDBACK:
     {
         id: 34208753,
-        slackEmoji: ':construction_worker:',
-        emoji: '👷',
+        project: `CR_FEEDBACK`,
+        slackEmoji: `:construction_worker:`,
+        emoji: `👷`,
     },
     //  DOING CR
     {
         id: 29996017,
-        slackEmoji: ':sleuth_or_spy:',
-        emoji: '🕵',
+        project: `DOING_CR`,
+        slackEmoji: `:sleuth_or_spy:`,
+        emoji: `🕵`,
     },
     //  MEETINGS:
     {
         id: 43940771,
-        slackEmoji: ':man-woman-girl-boy:',
-        emoji: '👨‍👩‍👧‍👦',
+        project: `MEETINGS`,
+        slackEmoji: `:man-woman-girl-boy:`,
+        emoji: `👨‍👩‍👧‍👦`,
     },
     //  LUNCHING AND LEARNING:
     {
         id: 46278295,
-        slackEmoji: ':burrito:',
-        emoji: '🍔',
-    }
-]
+        project: `LUNCH_AND_LEARNS`,
+        slackEmoji: `:burrito:`,
+        emoji: `🍔`,
+    },
+    //   INTERVIEWS
+    {
+        id: 53142826,
+        project: `INTERVIEWS`,
+        slackEmoji: `:speaking_head_in_silhouette:`,
+        emoji: `🗣️`,
+    },
+];
 
-module.exports = PROJECTS;
+export default PROJECTS;

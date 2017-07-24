@@ -9,7 +9,9 @@ This is pretty hardcoded to my own projects and needs, but I guess in case I for
 Clone repo and then create a `.env` file at the root with the following:
 
 ```
-API_TOKEN=<YOUR_TOGGLE_API_TOKEN>
+GITHUB_API_TOKEN=<YOUR_GITHUB_API_TOKEN>
+TOGGL_API_TOKEN=<YOUR_TOGGL_API_TOKEN>
+ZENHUB_API_TOKEN=<YOUR_ZENHUB_API_TOKEN>
 ```
 
 Then `yarn install` and you should be good to go. Run `node index.js` (or `yarnpkg run go`) to run the script.

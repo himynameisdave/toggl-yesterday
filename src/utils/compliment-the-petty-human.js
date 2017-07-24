@@ -18,12 +18,10 @@ const COMPLIMENTS = [
     `Go build some software`,
     `Good devs ship stuff`,
     `Be a linchpin`,
-    `Dayyyumn son, it's another beautiful day`
+    `Dayyyumn son, it's another beautiful day`,
 ].map(compliment => `${compliment}, human!`);
 
-const complimentThePettyHuman = () => {
-    return COMPLIMENTS[Math.floor(Math.random() * COMPLIMENTS.length)]
-};
+const complimentThePettyHuman = () => COMPLIMENTS[Math.floor(Math.random() * COMPLIMENTS.length)];
 
 
-module.exports = complimentThePettyHuman;
+export default complimentThePettyHuman;

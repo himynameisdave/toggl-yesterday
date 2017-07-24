@@ -1,5 +1,5 @@
-const clearConsole = require('clear');
-const complimentThePettyHuman = require('./compliment-the-petty-human.js')
+import clearConsole from 'clear';
+import complimentThePettyHuman from './compliment-the-petty-human.js';
 
 const BANNER = `
    C O P I E D    T O    T H E    C L I P B O A R D:`;
@@ -21,4 +21,4 @@ const successBanner = consoleText => () => {
     );
 };
 
-module.exports = successBanner;
+export default successBanner;
