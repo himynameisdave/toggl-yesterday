@@ -1,5 +1,5 @@
 import TogglClient from 'toggl-api';
-const Toggl = new TogglClient({ apiToken: process.env.API_TOKEN });
+const Toggl = new TogglClient({ apiToken: process.env.TOGGL_API_TOKEN });
 
 
 const fetchToggl = ({ START_DATE, END_DATE }) => new Promise((res, rej) => {

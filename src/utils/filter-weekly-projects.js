@@ -11,9 +11,8 @@ const filterWeeklyProjects = (entries) => {
         cr: [],
     };
     return entries.reduce((acc, entry) => {
-        console.log(IMPLEMENTED_PROJECTS, entry);
-        if (IMPLEMENTED_PROJECTS.includes(entry.pid)) return { ...acc, implemented: acc.implemented.concat(entry.description) };
-        if (CR_PROJECTS.includes(entry.pid)) return { ...acc, cr: acc.cr.concat(entry.description) };
+        if (IMPLEMENTED_PROJECTS.includes(entry.pid)) return { ...acc, implemented: acc.implemented.concat({ description: entry.description }) };
+        if (CR_PROJECTS.includes(entry.pid)) return { ...acc, cr: acc.cr.concat({ description: entry.description }) };
         return acc;
     }, INITIAL_STATE);
 };
